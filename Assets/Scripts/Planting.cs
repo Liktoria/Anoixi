@@ -7,19 +7,17 @@ using UnityEngine.Tilemaps;
 public class Planting : MonoBehaviour
 {
     //the tilemap where the new tile is supposed to go
-    public Tilemap groundTilemap;
+    public Tilemap backgroundDecorations;
+    public Tilemap foregroundDecorations;
+
     //the friendly green tile with flowers, Persephone creates by clicking
-    public Tile greenTile;
+    public Tile backgroundFlower;
+    public Tile foregroundFlower;
+
     //the position the character is currently placed at in world coordinates
     protected Vector3 characterPosition;
     //the distance between the clicked spot and the character
     private float distanceToCharacter = 0.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -47,13 +45,16 @@ public class Planting : MonoBehaviour
         Debug.Log("Click distance: " + distanceToCharacter);
 
         //if the distance is small enough (value can be altered to need)
-        if (distanceToCharacter < 3.8)
+        if (distanceToCharacter < 3.86)
         {
             Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
-            Vector3Int clickedCell = groundTilemap.WorldToCell(clickPosition);
+            Vector3Int clickedCell = backgroundDecorations.WorldToCell(clickPosition);
             //change the tile to the green tile
-            groundTilemap.SetTile(clickedCell, greenTile);
+            backgroundDecorations.SetTile(clickedCell, backgroundFlower);
+            foregroundDecorations.SetTile(clickedCell, foregroundFlower);
+
         }
     }
+
 }
