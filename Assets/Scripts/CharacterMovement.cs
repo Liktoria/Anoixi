@@ -57,9 +57,6 @@ public class CharacterMovement : MonoBehaviour
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
-        currentCell.y = currentCell.y - 1;
-        currentCell.x = currentCell.x - 1;
-        //Debug.Log(currentCell);
 
         if (gameObject.CompareTag("Player"))
         {
