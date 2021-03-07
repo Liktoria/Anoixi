@@ -7,10 +7,13 @@ public class CharacterMovement : MonoBehaviour
 {
     //speed the character is moving with
     public float movementSpeed = 1f;
+    public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
     public Tilemap groundTilemap;
 
     public List<Tile> grassTiles = new List<Tile>();
     public List<Tile> stoneTiles = new List<Tile>();
+    public List<Tile> elevatedStoneTiles = new List<Tile>();
+    public List<Tile> elevatedGrassTiles = new List<Tile>();
     private Vector3 characterPosition;
 
     //the renderer that will display the animation
@@ -57,31 +60,32 @@ public class CharacterMovement : MonoBehaviour
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
+        currentCell.z = calculateCorrectZ(currentCell);
 
         if (gameObject.CompareTag("Player"))
         {
-            if (isStone(currentCell))
+            if (isStone(currentCell, levelTilemapsAscending[currentCell.z]))
             {
-                Debug.Log("Stone tile detected.");
-                int randomIndex = Random.Range(0, grassTiles.Count - 1);
-                groundTilemap.SetTile(currentCell, grassTiles[randomIndex]);
-                Debug.Log("Tile should have changed.");
+                int randomGrassIndex = Random.Range(0, grassTiles.Count - 1);
+                //Add a check if the tile would be covered and if yes, render the tile that's covering it afterwards again, so it's shown correctly
+                //Rerender the 3 tiles in front of the changed tile -> take different heights into consideration
+                levelTilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
             }
         }
         else
         {
-            if (isGrass(currentCell))
+            if (isGrass(currentCell, levelTilemapsAscending[currentCell.z]))
             {
-                int randomIndex = Random.Range(0, stoneTiles.Count - 1);
-                groundTilemap.SetTile(currentCell, stoneTiles[randomIndex]);
+                int randomStoneIndex = Random.Range(0, stoneTiles.Count - 1);
+                levelTilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomStoneIndex]);
             }
         }
     }
 
-    private bool isStone(Vector3Int cellToCheck)
+    private bool isStone(Vector3Int cellToCheck, Tilemap tilemapToCheck)
     {
         bool isStone = false;
-        var currentTile = groundTilemap.GetTile(cellToCheck);
+        var currentTile = tilemapToCheck.GetTile(cellToCheck);
         int i = 0;
         for (; i < stoneTiles.Count; ++i)
         {
@@ -97,10 +101,10 @@ public class CharacterMovement : MonoBehaviour
     }
 
     //only important in case there will be tiles not classifiable as either stone or grass
-    private bool isGrass(Vector3Int cellToCheck)
+    private bool isGrass(Vector3Int cellToCheck, Tilemap tilemapToCheck)
     {
         bool isGrass = false;
-        var currentTile = groundTilemap.GetTile(cellToCheck);
+        var currentTile = tilemapToCheck.GetTile(cellToCheck);
         int i = 0;
         for (; i < grassTiles.Count; ++i)
         {
@@ -113,5 +117,20 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("Found a grass tile.");
         }
         return isGrass;
+    }
+
+    private int calculateCorrectZ(Vector3Int cellToCheck)
+    {
+        int z = 0;
+        for (int i = 0; i < levelTilemapsAscending.Count; i++)
+        {
+            cellToCheck.z = i;
+            if (levelTilemapsAscending[i].HasTile(cellToCheck))
+            {
+                z = i;
+            }
+        }
+
+        return z;
     }
 }
