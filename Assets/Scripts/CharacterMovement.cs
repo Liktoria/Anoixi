@@ -70,6 +70,16 @@ public class CharacterMovement : MonoBehaviour
                 //Add a check if the tile would be covered and if yes, render the tile that's covering it afterwards again, so it's shown correctly
                 //Rerender the 3 tiles in front of the changed tile -> take different heights into consideration
                 levelTilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
+
+                if ((currentCell.z > 0) && (currentCell.z % 2 == 0))
+                {
+                    for (int i = currentCell.z - 1; i >= 0; i--)
+                    {
+                        currentCell.z = i;
+                        int randomIndex = Random.Range(0, elevatedGrassTiles.Count - 1);
+                        levelTilemapsAscending[i].SetTile(currentCell, elevatedGrassTiles[randomIndex]);
+                    }
+                }
             }
         }
         else
