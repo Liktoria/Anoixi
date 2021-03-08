@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Events;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class CharacterMovement : MonoBehaviour
     public List<Tile> stoneTiles = new List<Tile>();
     public List<Tile> elevatedStoneTiles = new List<Tile>();
     public List<Tile> elevatedGrassTiles = new List<Tile>();
+
+    [Header("What should happen, when a tile changes to grass?")]
+    public UnityEvent tileWon;
+
+    [Header("What should happen, when a tile changes to stone?")]
+    public UnityEvent tileLost;
+
     private Vector3 characterPosition;
 
     //the renderer that will display the animation
@@ -67,8 +75,6 @@ public class CharacterMovement : MonoBehaviour
             if (isStone(currentCell, levelTilemapsAscending[currentCell.z]))
             {
                 int randomGrassIndex = Random.Range(0, grassTiles.Count - 1);
-                //Add a check if the tile would be covered and if yes, render the tile that's covering it afterwards again, so it's shown correctly
-                //Rerender the 3 tiles in front of the changed tile -> take different heights into consideration
                 levelTilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
 
                 if ((currentCell.z > 0) && (currentCell.z % 2 == 0))
@@ -80,6 +86,7 @@ public class CharacterMovement : MonoBehaviour
                         levelTilemapsAscending[i].SetTile(currentCell, elevatedGrassTiles[randomIndex]);
                     }
                 }
+                tileWon.Invoke();
             }
         }
         else
@@ -88,6 +95,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 int randomStoneIndex = Random.Range(0, stoneTiles.Count - 1);
                 levelTilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomStoneIndex]);
+                tileLost.Invoke();
             }
         }
     }
