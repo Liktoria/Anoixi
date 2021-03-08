@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class LevelController : MonoBehaviour
+﻿public static class LevelController
 {
-    // Start is called before the first frame update
-    void Start()
+    private static int transformableTiles;
+    private static int tilesAlreadyTransformed;
+
+    public static int getTransformableTiles ()
     {
-        
+        return transformableTiles;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static int getTilesAlreadyTranformed ()
     {
-        
+        return tilesAlreadyTransformed;
     }
 }
