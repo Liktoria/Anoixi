@@ -15,8 +15,10 @@ public class Planting : MonoBehaviour
     public List<Tile> plantsBackground = new List<Tile>();
     public List<Button> plantButtons = new List<Button>();
 
+    private Mana myMana;
     private int plantIndex = 100;
     private bool[] plantable;
+    private float[] manaValues = { 10.0f, 5.0f, 20.0f, 15.0f };
 
     //the position the character is currently placed at in world coordinates
     protected Vector3 characterPosition;
@@ -30,6 +32,7 @@ public class Planting : MonoBehaviour
         {
             plantable[i] = true;
         }
+        myMana = GetComponent<Mana>();
     }
 
     // Update is called once per frame
@@ -62,13 +65,24 @@ public class Planting : MonoBehaviour
         {
             Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
-            Vector3Int clickedCell = backgroundDecorations.WorldToCell(clickPosition);
+            Vector3Int clickedCell = foregroundDecorations.WorldToCell(clickPosition);
+
             //plant the selected plant
+            //TODO: Fix planting on elevated tiles
             if (plantIndex < plantsForeground.Count && plantable[plantIndex])
             {
-                backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
-                foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
-                StartCoroutine(plantCooldown(plantIndex));
+                if (myMana.currentValue >= manaValues[plantIndex])
+                {
+                    backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
+                    foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
+                    myMana.useMana(manaValues[plantIndex]);
+                    StartCoroutine(plantCooldown(plantIndex));
+                }
+                else
+                {
+                    //can't plant stuff cause not enough mana
+                    // TODO: display text/animation and stuff
+                }
             }
 
         }
@@ -89,16 +103,16 @@ public class Planting : MonoBehaviour
         switch (currentIndex)
         {
             case 0:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(0);
                 break;
             case 1:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(0);
                 break;
             case 2:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(0);
                 break;
             case 3:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(0);
                 break;
             case 4:
                 yield return new WaitForSeconds(5);
