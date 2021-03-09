@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Events;
 
 public class Mana : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Mana : MonoBehaviour
     public float currentValue;
     private Vector3 characterPosition;
     private bool hasFlower;
+    private float waitTime = 1.0f;
+    private float timer = 0.0f;
 
 
     // Start is called before the first frame update
@@ -22,17 +25,19 @@ public class Mana : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = decorationsForeground.WorldToCell(characterPosition);
         currentCell.z = calculateCorrectZ(currentCell);
         hasFlower = isFlowerPresent(currentCell);
+        timer += Time.deltaTime;
 
-        if (hasFlower && currentValue <= 100.0f)
+        if (timer > waitTime && hasFlower && currentValue <= 100.0f)
         {
-            InvokeRepeating("increaseMana", 2.0f, 1.0f);
+            increaseMana();
         }
     }
 
@@ -48,15 +53,11 @@ public class Mana : MonoBehaviour
     
     private void increaseMana()
     {
+
         currentValue = currentValue + 0.1f;
         if (currentValue >= 100.0f)
         {
             currentValue = 100.0f;
-            return;
-        }
-        else if (!hasFlower)
-        {
-            return;
         }
         manaBar.BarValue = currentValue;
     }
@@ -74,7 +75,6 @@ public class Mana : MonoBehaviour
         if (i < flowerTiles.Count)
         {
             isFlowerPresent = true;
-            Debug.Log("Found a flower tile.");
         }
         return isFlowerPresent;
     }
