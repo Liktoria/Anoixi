@@ -10242,6 +10242,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e49b80183a0ecf64cbc21d11e58df5c3, type: 2}
   - {fileID: 11400000, guid: 22e403b2dafeb4d4baf1cc9cabcb14b7, type: 2}
   - {fileID: 11400000, guid: 9c781d490d3ed6c479bc5285ebd3525e, type: 2}
+  plantButtons:
+  - {fileID: 807455951}
+  - {fileID: 40132887}
+  - {fileID: 1892719298}
+  - {fileID: 1190554574}
 --- !u!1 &2096305872
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 //Handles the click events by the player e.g. for planting flowers. Attach this to the Character game object
 public class Planting : MonoBehaviour
@@ -12,13 +13,24 @@ public class Planting : MonoBehaviour
 
     public List<Tile> plantsForeground = new List<Tile>();
     public List<Tile> plantsBackground = new List<Tile>();
+    public List<Button> plantButtons = new List<Button>();
 
-    private int plantIndex = 0;
+    private int plantIndex = 100;
+    private bool[] plantable;
 
     //the position the character is currently placed at in world coordinates
     protected Vector3 characterPosition;
     //the distance between the clicked spot and the character
     private float distanceToCharacter = 0.0f;
+
+    void Start()
+    {
+        plantable = new bool[plantsForeground.Count];
+        for (int i = 0; i < plantable.Length; i++)
+        {
+            plantable[i] = true;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -51,9 +63,13 @@ public class Planting : MonoBehaviour
             Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
             Vector3Int clickedCell = backgroundDecorations.WorldToCell(clickPosition);
-            //change the tile to the green tile
-            backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
-            foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
+            //plant the selected plant
+            if (plantIndex < plantsForeground.Count && plantable[plantIndex])
+            {
+                backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
+                foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
+                StartCoroutine(plantCooldown(plantIndex));
+            }
 
         }
     }
@@ -61,5 +77,34 @@ public class Planting : MonoBehaviour
     public void setPlantType (int newPlantIndex)
     {
         plantIndex = newPlantIndex;
+    }
+
+    IEnumerator plantCooldown(int currentIndex)
+    {
+        plantButtons[currentIndex].enabled = false;
+        plantable[currentIndex] = false;
+
+        //configure cooldown times for each type of plant seperately
+        //TODO: add animations to buttons and call them here
+        switch (currentIndex)
+        {
+            case 0:
+                yield return new WaitForSeconds(5);
+                break;
+            case 1:
+                yield return new WaitForSeconds(5);
+                break;
+            case 2:
+                yield return new WaitForSeconds(5);
+                break;
+            case 3:
+                yield return new WaitForSeconds(5);
+                break;
+            case 4:
+                yield return new WaitForSeconds(5);
+                break;
+        }
+        plantButtons[currentIndex].enabled = true;
+        plantable[currentIndex] = true;
     }
 }
