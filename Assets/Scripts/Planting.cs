@@ -10,9 +10,10 @@ public class Planting : MonoBehaviour
     public Tilemap backgroundDecorations;
     public Tilemap foregroundDecorations;
 
-    //the friendly green tile with flowers, Persephone creates by clicking
-    public Tile backgroundFlower;
-    public Tile foregroundFlower;
+    public List<Tile> plantsForeground = new List<Tile>();
+    public List<Tile> plantsBackground = new List<Tile>();
+
+    private int plantIndex = 0;
 
     //the position the character is currently placed at in world coordinates
     protected Vector3 characterPosition;
@@ -26,12 +27,12 @@ public class Planting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Mouse clicked.");
-            spawnFlowers();
+            spawnPlants();
         }
     }
 
     //changes the clicked tile to another tile within a certain radius around the character
-    void spawnFlowers()
+    void spawnPlants()
     {
         //detect the position of the mouse and convert the coordinates to world coordinates
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -51,10 +52,14 @@ public class Planting : MonoBehaviour
             //determine the cell in the tilemap corresponding to the mouse position
             Vector3Int clickedCell = backgroundDecorations.WorldToCell(clickPosition);
             //change the tile to the green tile
-            backgroundDecorations.SetTile(clickedCell, backgroundFlower);
-            foregroundDecorations.SetTile(clickedCell, foregroundFlower);
+            backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
+            foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
 
         }
     }
 
+    public void setPlantType (int newPlantIndex)
+    {
+        plantIndex = newPlantIndex;
+    }
 }
