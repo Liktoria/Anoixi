@@ -14,11 +14,13 @@ public class Planting : MonoBehaviour
     public List<Tile> plantsForeground = new List<Tile>();
     public List<Tile> plantsBackground = new List<Tile>();
     public List<Button> plantButtons = new List<Button>();
+    public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
 
     private Mana myMana;
     private int plantIndex = 100;
     private bool[] plantable;
     private float[] manaValues = { 10.0f, 5.0f, 20.0f, 15.0f };
+    //private Calculations calculation = new Calculations();
 
     //the position the character is currently placed at in world coordinates
     protected Vector3 characterPosition;
@@ -66,6 +68,7 @@ public class Planting : MonoBehaviour
             Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
             Vector3Int clickedCell = foregroundDecorations.WorldToCell(clickPosition);
+            //clickedCell.z = calculation.calculateCorrectZ(clickedCell, levelTilemapsAscending);
 
             //plant the selected plant
             //TODO: Fix planting on elevated tiles

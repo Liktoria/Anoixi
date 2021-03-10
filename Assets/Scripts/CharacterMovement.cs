@@ -23,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
     public UnityEvent tileLost;
 
     private Vector3 characterPosition;
+    private Calculations calculation = new Calculations();
 
     //the renderer that will display the animation
     CharacterRenderer isoRenderer;
@@ -68,7 +69,7 @@ public class CharacterMovement : MonoBehaviour
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
-        currentCell.z = calculateCorrectZ(currentCell);
+        currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
 
         if (gameObject.CompareTag("Player"))
         {
@@ -135,20 +136,5 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log("Found a grass tile.");
         }
         return isGrass;
-    }
-
-    private int calculateCorrectZ(Vector3Int cellToCheck)
-    {
-        int z = 0;
-        for (int i = 0; i < levelTilemapsAscending.Count; i++)
-        {
-            cellToCheck.z = i;
-            if (levelTilemapsAscending[i].HasTile(cellToCheck))
-            {
-                z = i;
-            }
-        }
-
-        return z;
     }
 }

@@ -15,6 +15,7 @@ public class Mana : MonoBehaviour
     private bool hasFlower;
     private float waitTime = 1.0f;
     private float timer = 0.0f;
+    //private Calculations calculation = new Calculations();
 
 
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class Mana : MonoBehaviour
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = decorationsForeground.WorldToCell(characterPosition);
-        currentCell.z = calculateCorrectZ(currentCell);
+        //currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
         hasFlower = isFlowerPresent(currentCell);
         timer += Time.deltaTime;
 
@@ -77,20 +78,5 @@ public class Mana : MonoBehaviour
             isFlowerPresent = true;
         }
         return isFlowerPresent;
-    }
-
-    private int calculateCorrectZ(Vector3Int cellToCheck)
-    {
-        int z = 0;
-        for (int i = 0; i < levelTilemapsAscending.Count; i++)
-        {
-            cellToCheck.z = i;
-            if (levelTilemapsAscending[i].HasTile(cellToCheck))
-            {
-                z = i;
-            }
-        }
-
-        return z;
     }
 }
