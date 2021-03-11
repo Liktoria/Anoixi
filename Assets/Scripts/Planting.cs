@@ -63,20 +63,17 @@ public class Planting : MonoBehaviour
         Debug.Log("Click distance: " + distanceToCharacter);
 
         //if the distance is small enough (value can be altered to need)
-        if (distanceToCharacter < 49.48)
+        if (distanceToCharacter < 1.7)
         {
-            Debug.Log("Distance okay.");
+            //Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
             Vector3Int clickedCell = foregroundDecorations.WorldToCell(clickPosition);
-            Debug.Log("Clicked cell: " + clickedCell);
             //clickedCell.z = calculation.calculateCorrectZ(clickedCell, levelTilemapsAscending);
 
             //plant the selected plant
             //TODO: Fix planting on elevated tiles
-            Debug.Log("plant index: " + plantIndex);
             if (plantIndex < plantsForeground.Count && plantable[plantIndex])
             {
-                Debug.Log("First conditions fulfilled.");
                 if (myMana.currentValue >= manaValues[plantIndex])
                 {
                     backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
