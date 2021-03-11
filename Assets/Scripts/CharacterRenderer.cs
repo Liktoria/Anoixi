@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CharacterRenderer : MonoBehaviour
 {
-    public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
-    public static readonly string[] runDirections = { "Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE" };
+    public static readonly string[] staticDirections = { "N Idle", "NW Idle", "SW Idle", "S Idle", "SE Idle", "NE Idle" };
+    public static readonly string[] runDirections = { "N Walk", "NW Walk", "SW Walk", "S Walk", "SE Walk", "NE Walk" };
 
     Animator animator;
     int lastDirection;
@@ -36,7 +36,7 @@ public class CharacterRenderer : MonoBehaviour
             //use DirectionToIndex to get the index of the slice from the direction vector
             //save the answer to lastDirection
             directionArray = runDirections;
-            lastDirection = DirectionToIndex(direction, 8);
+            lastDirection = DirectionToIndex(direction, 6);
         }
 
         //tell the animator to play the requested state

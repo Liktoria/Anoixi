@@ -34,7 +34,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
-        isoRenderer = GetComponentInChildren<CharacterRenderer>();
+        isoRenderer = GetComponent<CharacterRenderer>();
     }
 
 
