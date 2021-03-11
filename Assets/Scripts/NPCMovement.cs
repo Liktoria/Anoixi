@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.Events;
 
-public class CharacterMovement : MonoBehaviour
+public class NPCMovement : MonoBehaviour
 {
     //speed the character is moving with
     public float movementSpeed = 1f;
@@ -16,11 +16,12 @@ public class CharacterMovement : MonoBehaviour
     public List<Tile> elevatedStoneTiles = new List<Tile>();
     public List<Tile> elevatedGrassTiles = new List<Tile>();
 
-    [Header("What should happen, when a tile changes to grass?")]
-    public UnityEvent tileWon;
+    [Header("What should happen, when a tile changes to stone?")]
+    public UnityEvent tileLost;
 
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
+
 
     //the renderer that will display the animation
     CharacterRenderer isoRenderer;
@@ -68,12 +69,12 @@ public class CharacterMovement : MonoBehaviour
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
         currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
 
-        if (gameObject.CompareTag("Player"))
+        if (gameObject.CompareTag("Demon"))
         {
-            if (isStone(currentCell, levelTilemapsAscending[currentCell.z]))
+            if (isGrass(currentCell, levelTilemapsAscending[currentCell.z]))
             {
-                int randomGrassIndex = Random.Range(0, grassTiles.Count - 1);
-                levelTilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
+                int randomGrassIndex = Random.Range(0, stoneTiles.Count - 1);
+                levelTilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomGrassIndex]);
 
                 //if ((currentCell.z > 0) && (currentCell.z % 2 == 0))
                 //{
@@ -84,7 +85,7 @@ public class CharacterMovement : MonoBehaviour
                 //        levelTilemapsAscending[i].SetTile(currentCell, elevatedGrassTiles[randomIndex]);
                 //    }
                 //}
-                tileWon.Invoke();
+                tileLost.Invoke();
             }
         }
     }

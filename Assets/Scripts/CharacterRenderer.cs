@@ -6,7 +6,10 @@ public class CharacterRenderer : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "N Idle", "NW Idle", "SW Idle", "S Idle", "SE Idle", "NE Idle" };
     public static readonly string[] runDirections = { "N Walk", "NW Walk", "SW Walk", "S Walk", "SE Walk", "NE Walk" };
+    //public static readonly string[] flyDirections = { "N Fly", "NW Fly", "SW Fly", "S Fly", "SE Fly", "NE Fly" };
 
+
+    public bool hasIdleAnimation;
     Animator animator;
     int lastDirection;
 
@@ -24,7 +27,7 @@ public class CharacterRenderer : MonoBehaviour
         string[] directionArray = null;
 
         //measure the magnitude of the input.
-        if (direction.magnitude < .01f)
+        if (direction.magnitude < .01f && hasIdleAnimation)
         {
             //if we are basically standing still, we'll use the Static states
             //we won't be able to calculate a direction if the user isn't pressing one, anyway!
