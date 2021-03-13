@@ -7,12 +7,9 @@ using UnityEngine.UI;
 //Handles the click events by the player e.g. for planting flowers. Attach this to the Character game object
 public class Planting : MonoBehaviour
 {
-    //the tilemap where the new tile is supposed to go
-    //public Tilemap backgroundDecorations;
-    //public Tilemap foregroundDecorations;
+
 
     public List<GameObject> plantPrefabs = new List<GameObject>();
-    //public List<Tile> plantsBackground = new List<Tile>();
     public List<Button> plantButtons = new List<Button>();
     public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
 
@@ -79,8 +76,6 @@ public class Planting : MonoBehaviour
                 if (levelManager.getCurrentMana() >= manaValues[plantIndex])
                 {
                     Instantiate(plantPrefabs[plantIndex], clickPosition, Quaternion.identity);
-                    //backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
-                    //foregroundDecorations.SetTile(clickedCell, plantPrefabs[plantIndex]);
                     myMana.useMana(manaValues[plantIndex]);
                     StartCoroutine(plantCooldown(plantIndex));
                 }
