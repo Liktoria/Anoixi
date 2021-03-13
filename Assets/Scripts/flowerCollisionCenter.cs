@@ -25,11 +25,11 @@ public class flowerCollisionCenter : MonoBehaviour
         {
             oldManaIncreasing = levelManager.getManaIncreasing();
             levelManager.setManaIncreasing(true);
-            if (oldManaIncreasing != levelManager.getManaIncreasing())
+            if (oldManaIncreasing != levelManager.getManaIncreasing() && levelManager.getCurrentMana() < 100)
             {
                 //mana starts filling up
                 //playerCollisionStarted.Invoke();
-                myMana.InvokeRepeating("increaseMana", 1, 1.0F);
+                myMana.InvokeRepeating("increaseMana", 0.2F, 0.1F);
             }
 
         }

@@ -26,6 +26,7 @@ public class Planting : MonoBehaviour
     protected Vector3 characterPosition;
     //the distance between the clicked spot and the character
     private float distanceToCharacter = 0.0f;
+    private LevelManager levelManager;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class Planting : MonoBehaviour
             plantable[i] = true;
         }
         myMana = GetComponent<Mana>();
+        levelManager = LevelManager.getInstance();
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class Planting : MonoBehaviour
             //TODO: Fix planting on elevated tiles
             if (plantIndex < plantPrefabs.Count && plantable[plantIndex])
             {
-                if (myMana.currentValue >= manaValues[plantIndex])
+                if (levelManager.getCurrentMana() >= manaValues[plantIndex])
                 {
                     Instantiate(plantPrefabs[plantIndex], clickPosition, Quaternion.identity);
                     //backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);

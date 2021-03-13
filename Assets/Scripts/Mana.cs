@@ -8,10 +8,10 @@ public class Mana : MonoBehaviour
 {
     public ProgressBar manaBar;
     //public Tilemap decorationsForeground;
-    public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
+    //public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
     //public List<GameObject> flowerPrefabs = new List<GameObject>();
-    public float currentValue;
-    private Vector3 characterPosition;
+    //public float currentValue;
+    //private Vector3 characterPosition;
     //private bool hasFlower;
     //private float waitTime = 1.0f;
     //private float timer = 0.0f;
@@ -32,8 +32,7 @@ public class Mana : MonoBehaviour
     public void useMana(float value)
     {
         levelManager.setCurrentMana(levelManager.getCurrentMana() - value);
-        currentValue = levelManager.getCurrentMana();
-        if (currentValue <= 0.0f)
+        if (levelManager.getCurrentMana() < 0.0f)
         {
             levelManager.setCurrentMana(0.0f);
         }
@@ -43,15 +42,17 @@ public class Mana : MonoBehaviour
     public void increaseMana()
     {
         //do every second
-        levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.1f);
-        manaBar.BarValue = levelManager.getCurrentMana();
-
         if (!levelManager.getManaIncreasing())
         {
             return;
         }
+        else
+        {
+            levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.3f);
+            manaBar.BarValue = levelManager.getCurrentMana();
+        }
 
-        else if (levelManager.getCurrentMana() >= 100.0f)
+        if (levelManager.getCurrentMana() >= 100.0f)
         {
             levelManager.setCurrentMana(100.0f);
             return;
