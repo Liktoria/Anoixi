@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class Planting : MonoBehaviour
 {
     //the tilemap where the new tile is supposed to go
-    public Tilemap backgroundDecorations;
-    public Tilemap foregroundDecorations;
+    //public Tilemap backgroundDecorations;
+    //public Tilemap foregroundDecorations;
 
-    public List<Tile> plantsForeground = new List<Tile>();
-    public List<Tile> plantsBackground = new List<Tile>();
+    public List<GameObject> plantPrefabs = new List<GameObject>();
+    //public List<Tile> plantsBackground = new List<Tile>();
     public List<Button> plantButtons = new List<Button>();
     public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
 
@@ -29,7 +29,7 @@ public class Planting : MonoBehaviour
 
     void Start()
     {
-        plantable = new bool[plantsForeground.Count];
+        plantable = new bool[plantPrefabs.Count];
         for (int i = 0; i < plantable.Length; i++)
         {
             plantable[i] = true;
@@ -67,17 +67,18 @@ public class Planting : MonoBehaviour
         {
             //Debug.Log("Distance okay.");
             //determine the cell in the tilemap corresponding to the mouse position
-            Vector3Int clickedCell = foregroundDecorations.WorldToCell(clickPosition);
+            //Vector3Int clickedCell = foregroundDecorations.WorldToCell(clickPosition);
             //clickedCell.z = calculation.calculateCorrectZ(clickedCell, levelTilemapsAscending);
 
             //plant the selected plant
             //TODO: Fix planting on elevated tiles
-            if (plantIndex < plantsForeground.Count && plantable[plantIndex])
+            if (plantIndex < plantPrefabs.Count && plantable[plantIndex])
             {
                 if (myMana.currentValue >= manaValues[plantIndex])
                 {
-                    backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
-                    foregroundDecorations.SetTile(clickedCell, plantsForeground[plantIndex]);
+                    Instantiate(plantPrefabs[plantIndex], clickPosition, Quaternion.identity);
+                    //backgroundDecorations.SetTile(clickedCell, plantsBackground[plantIndex]);
+                    //foregroundDecorations.SetTile(clickedCell, plantPrefabs[plantIndex]);
                     myMana.useMana(manaValues[plantIndex]);
                     StartCoroutine(plantCooldown(plantIndex));
                 }

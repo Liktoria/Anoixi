@@ -7,76 +7,71 @@ using UnityEngine.Events;
 public class Mana : MonoBehaviour
 {
     public ProgressBar manaBar;
-    public Tilemap decorationsForeground;
+    //public Tilemap decorationsForeground;
     public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
-    public List<Tile> flowerTiles = new List<Tile>();
+    //public List<GameObject> flowerPrefabs = new List<GameObject>();
     public float currentValue;
     private Vector3 characterPosition;
-    private bool hasFlower;
-    private float waitTime = 1.0f;
-    private float timer = 0.0f;
+    //private bool hasFlower;
+    //private float waitTime = 1.0f;
+    //private float timer = 0.0f;
+    //private bool manaIncreasing = false;
+    private LevelManager levelManager;
     //private Calculations calculation = new Calculations();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentValue = 100.0f;
-        manaBar.BarValue = currentValue;
-    }
+        levelManager = LevelManager.getInstance();
+        levelManager.setCurrentMana(100.0f);
+        manaBar.BarValue = levelManager.getCurrentMana();
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        characterPosition = transform.position;
-        characterPosition.z = 0;
-        Vector3Int currentCell = decorationsForeground.WorldToCell(characterPosition);
-        //currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
-        hasFlower = isFlowerPresent(currentCell);
-        timer += Time.deltaTime;
-
-        if (timer > waitTime && hasFlower && currentValue <= 100.0f)
-        {
-            increaseMana();
-        }
     }
 
     public void useMana(float value)
     {
-        currentValue = currentValue - value;
+        levelManager.setCurrentMana(levelManager.getCurrentMana() - value);
+        currentValue = levelManager.getCurrentMana();
         if (currentValue <= 0.0f)
         {
-            currentValue = 0.0f;
+            levelManager.setCurrentMana(0.0f);
         }
-        manaBar.BarValue = currentValue;
-    }
-    
-    private void increaseMana()
-    {
-
-        currentValue = currentValue + 0.1f;
-        if (currentValue >= 100.0f)
-        {
-            currentValue = 100.0f;
-        }
-        manaBar.BarValue = currentValue;
+        manaBar.BarValue = levelManager.getCurrentMana();
     }
 
-    private bool isFlowerPresent (Vector3Int currentCell)
+    public void increaseMana()
     {
-        bool isFlowerPresent = false;
-        var currentTile = decorationsForeground.GetTile(currentCell);
-        int i = 0;
-        for (; i < flowerTiles.Count; ++i)
+        //do every second
+        levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.1f);
+        manaBar.BarValue = levelManager.getCurrentMana();
+
+        if (!levelManager.getManaIncreasing())
         {
-            if (currentTile == flowerTiles[i])
-                break;
+            return;
         }
-        if (i < flowerTiles.Count)
+
+        else if (levelManager.getCurrentMana() >= 100.0f)
         {
-            isFlowerPresent = true;
+            levelManager.setCurrentMana(100.0f);
+            return;
         }
-        return isFlowerPresent;
     }
 }
+
+    //private bool isFlowerPresent (Vector3Int currentCell)
+    //{
+    //    bool isFlowerPresent = false;
+    //    var currentTile = decorationsForeground.GetTile(currentCell);
+    //    int i = 0;
+    //    for (; i < flowerPrefabs.Count; ++i)
+    //    {
+    //        if (currentTile == flowerPrefabs[i])
+    //            break;
+    //    }
+    //    if (i < flowerPrefabs.Count)
+    //    {
+    //        isFlowerPresent = true;
+    //    }
+    //    return isFlowerPresent;
+    //}
