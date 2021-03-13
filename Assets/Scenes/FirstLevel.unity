@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09998106c62c26b4780c6fd99cc9c7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 1977072723}
+  followTarget: {fileID: 1783416608}
   moveSpeed: 10
 --- !u!114 &963194231
 MonoBehaviour:
@@ -2345,12 +2345,12 @@ PrefabInstance:
     - target: {fileID: 2944218325205010521, guid: fbadd3cef91cf4eea8261c9453ac7416,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6
+      value: -6.52
       objectReference: {fileID: 0}
     - target: {fileID: 2944218325205010521, guid: fbadd3cef91cf4eea8261c9453ac7416,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.08
+      value: 2.39
       objectReference: {fileID: 0}
     - target: {fileID: 2944218325205010521, guid: fbadd3cef91cf4eea8261c9453ac7416,
         type: 3}
@@ -8413,6 +8413,12 @@ MonoBehaviour:
   - {fileID: 1548244451}
   - {fileID: 748958348}
   - {fileID: 832115417}
+--- !u!4 &1783416608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2944218325205010521, guid: fbadd3cef91cf4eea8261c9453ac7416,
+    type: 3}
+  m_PrefabInstance: {fileID: 1267043156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1867275486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8858,12 +8864,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasIdleAnimation: 0
---- !u!4 &1977072723 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 779167226920183710, guid: 2ca2405a041124076bf13344b4dc84fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1867275486}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2091140031
 GameObject:
   m_ObjectHideFlags: 0
@@ -9123,6 +9123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698837396870741251, guid: 90ba49bde888a6942be92a07e9f1cc1a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 698837396870741251, guid: 90ba49bde888a6942be92a07e9f1cc1a,
         type: 3}

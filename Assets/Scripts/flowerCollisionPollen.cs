@@ -6,12 +6,12 @@ public class flowerCollisionPollen : MonoBehaviour
 {
     public bool hasPollen;
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasPollen && collision.gameObject.tag == "Demon")
+        if (hasPollen && other.gameObject.tag == "Demon")
         {
             //TODO: animation and sneezing sound
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

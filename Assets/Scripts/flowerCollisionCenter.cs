@@ -20,7 +20,6 @@ public class flowerCollisionCenter : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Flower noticed collision.");
         if (other.gameObject.tag == "Player")
         {
             oldManaIncreasing = levelManager.getManaIncreasing();
