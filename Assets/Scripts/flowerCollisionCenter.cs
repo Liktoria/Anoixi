@@ -29,7 +29,7 @@ public class flowerCollisionCenter : MonoBehaviour
             {
                 //mana starts filling up
                 //playerCollisionStarted.Invoke();
-                myMana.InvokeRepeating("increaseMana", 0.2F, 0.1F);
+                myMana.InvokeRepeating("increaseMana", 0.2F, 0.01F);
             }
 
         }
