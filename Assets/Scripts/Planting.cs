@@ -16,7 +16,7 @@ public class Planting : MonoBehaviour
     private Mana myMana;
     private int plantIndex = 100;
     private bool[] plantable;
-    private float[] manaValues = { 10.0f, 5.0f, 20.0f, 15.0f };
+    private float[] manaValues = { 10.0f, 5.0f, 20.0f, 15.0f, 40.0f };
     //private Calculations calculation = new Calculations();
 
     //the position the character is currently placed at in world coordinates

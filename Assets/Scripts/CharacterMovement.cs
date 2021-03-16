@@ -46,7 +46,7 @@ public class CharacterMovement : MonoBehaviour
         //save the input into a vector and clamp it to prevent diagonal movement becoming faster than movement in the cardinal directions
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        
+
         //multiply with movement speed and calculate the new position
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; //use Time.fixedDeltaTime to make sure the movement is stable across different frame rates
@@ -59,6 +59,7 @@ public class CharacterMovement : MonoBehaviour
         //move the character
         rbody.MovePosition(newPos);
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+
     }
 
     private void setNewTile()
