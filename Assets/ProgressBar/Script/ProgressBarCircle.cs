@@ -28,7 +28,6 @@ public class ProgressBarCircle : MonoBehaviour {
     private Image bar, barBackground,Mask;
     private float nextPlay;
     private AudioSource audiosource;
-    private Text txtTitle;
     private float barValue;
     public float BarValue
     {
@@ -46,7 +45,6 @@ public class ProgressBarCircle : MonoBehaviour {
     private void Awake()
     {
 
-        txtTitle = transform.Find("Text").GetComponent<Text>();
         barBackground = transform.Find("BarBackgroundCircle").GetComponent<Image>();
         bar = transform.Find("BarCircle").GetComponent<Image>();
         audiosource = GetComponent<AudioSource>();
@@ -54,12 +52,7 @@ public class ProgressBarCircle : MonoBehaviour {
     }
 
     private void Start()
-    {
-        txtTitle.text = Title;
-        txtTitle.color = TitleColor;
-        txtTitle.font = TitleFont;
-       
-
+    {   
         bar.color = BarColor;
         Mask.color = MaskColor;
         barBackground.color = BarBackGroundColor;
@@ -74,8 +67,6 @@ public class ProgressBarCircle : MonoBehaviour {
     {
        
         bar.fillAmount = -(val / 100) + 1f;
-
-        txtTitle.text = Title + " " + val + "%";
 
         if (Alert >= val)
         {
@@ -97,8 +88,6 @@ public class ProgressBarCircle : MonoBehaviour {
         {
            
             UpdateValue(50);
-            txtTitle.color = TitleColor;
-            txtTitle.font = TitleFont;
             Mask.color = MaskColor;
             bar.color = BarColor;
             barBackground.color = BarBackGroundColor;

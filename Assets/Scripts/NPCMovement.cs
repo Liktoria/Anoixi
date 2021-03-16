@@ -15,6 +15,7 @@ public class NPCMovement : MonoBehaviour
     public List<Tile> stoneTiles = new List<Tile>();
     public List<Tile> elevatedStoneTiles = new List<Tile>();
     public List<Tile> elevatedGrassTiles = new List<Tile>();
+    public List<DecorationChanger> decorations = new List<DecorationChanger>();
 
     [Header("What should happen, when a tile changes to stone?")]
     public UnityEvent tileLost;
@@ -75,17 +76,14 @@ public class NPCMovement : MonoBehaviour
             {
                 int randomGrassIndex = Random.Range(0, stoneTiles.Count - 1);
                 levelTilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomGrassIndex]);
-
-                //if ((currentCell.z > 0) && (currentCell.z % 2 == 0))
-                //{
-                //    for (int i = currentCell.z - 1; i >= 0; i--)
-                //    {
-                //        currentCell.z = i;
-                //        int randomIndex = Random.Range(0, elevatedGrassTiles.Count - 1);
-                //        levelTilemapsAscending[i].SetTile(currentCell, elevatedGrassTiles[randomIndex]);
-                //    }
-                //}
                 tileLost.Invoke();
+                for (int i = 0; i < decorations.Count; i++)
+                {
+                    if (decorations[i].surroundingCells.Contains(currentCell))
+                    {
+                        decorations[i].surroundingTileChanged(currentCell, false);
+                    }
+                }
             }
         }
     }

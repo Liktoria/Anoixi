@@ -7,8 +7,6 @@ using UnityEngine.UI;
 //Handles the click events by the player e.g. for planting flowers. Attach this to the Character game object
 public class Planting : MonoBehaviour
 {
-
-
     public List<GameObject> plantPrefabs = new List<GameObject>();
     public List<Button> plantButtons = new List<Button>();
     public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
@@ -75,8 +73,10 @@ public class Planting : MonoBehaviour
             {
                 if (levelManager.getCurrentMana() >= manaValues[plantIndex])
                 {
+                    plantable[plantIndex] = false;
                     Instantiate(plantPrefabs[plantIndex], clickPosition, Quaternion.identity);
                     myMana.useMana(manaValues[plantIndex]);
+                    plantButtons[plantIndex].GetComponent<ButtonCooldown>().startCooldown();
                     StartCoroutine(plantCooldown(plantIndex));
                 }
                 else
@@ -96,15 +96,13 @@ public class Planting : MonoBehaviour
 
     IEnumerator plantCooldown(int currentIndex)
     {
-        plantButtons[currentIndex].enabled = false;
-        plantable[currentIndex] = false;
 
         //configure cooldown times for each type of plant seperately
-        //TODO: add animations to buttons and call them here
+        //TODO: add animations to buttons and call them here & switch index to enum
         switch (currentIndex)
         {
             case 0:
-                yield return new WaitForSeconds(0);
+                yield return new WaitForSeconds(5);
                 break;
             case 1:
                 yield return new WaitForSeconds(0);
@@ -119,7 +117,7 @@ public class Planting : MonoBehaviour
                 yield return new WaitForSeconds(5);
                 break;
         }
-        plantButtons[currentIndex].enabled = true;
+        //plantButtons[currentIndex].enabled = true;
         plantable[currentIndex] = true;
     }
 }
