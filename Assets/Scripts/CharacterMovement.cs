@@ -8,7 +8,6 @@ public class CharacterMovement : MonoBehaviour
 {
     //speed the character is moving with
     public float movementSpeed = 1f;
-    public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
     public Tilemap groundTilemap;
 
     public List<Tile> grassTiles = new List<Tile>();
@@ -20,8 +19,10 @@ public class CharacterMovement : MonoBehaviour
     [Header("What should happen, when a tile changes to grass?")]
     public UnityEvent tileWon;
 
+    private LevelManager levelmanager;
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
+    private List<Tilemap> tilemapsAscending = new List<Tilemap>();
 
     //the renderer that will display the animation
     CharacterRenderer isoRenderer;
@@ -29,12 +30,14 @@ public class CharacterMovement : MonoBehaviour
     Rigidbody2D rbody;
 
     //On starting the game (function is called before Start()) get the necessary components from the character game object, the script is attached to
-    private void Awake()
+    private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponent<CharacterRenderer>();
+        levelmanager = LevelManager.getInstance();
+        tilemapsAscending = levelmanager.getTilemapsAscending();
+        Debug.Log(calculation);
     }
-
 
     // frame-independent function that uses the frequency of the physics system
     void FixedUpdate()
@@ -66,16 +69,16 @@ public class CharacterMovement : MonoBehaviour
     private void setNewTile()
     {
         characterPosition = transform.position;
-        //characterPosition.z = 0;
+        characterPosition.z = 0;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
-        currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
+        currentCell.z = calculation.calculateCorrectZ(currentCell);
 
         if (gameObject.CompareTag("Player"))
         {
-            if (isStone(currentCell, levelTilemapsAscending[currentCell.z]))
+            if (isStone(currentCell, tilemapsAscending[currentCell.z]))
             {
                 int randomGrassIndex = Random.Range(0, grassTiles.Count - 1);
-                levelTilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
+                tilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
                 tileWon.Invoke();
                 for(int i = 0; i < decorations.Count; i++)
                 {

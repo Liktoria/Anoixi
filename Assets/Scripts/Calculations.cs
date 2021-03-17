@@ -5,13 +5,18 @@ using UnityEngine.Tilemaps;
 
 public class Calculations
 {
-    public int calculateCorrectZ(Vector3Int cellToCheck, List<Tilemap> levelTilemapsAscending)
+    private LevelManager levelmanager;
+    private List<Tilemap> tilemapsAscending = new List<Tilemap>();
+
+    public int calculateCorrectZ(Vector3Int cellToCheck)
     {
+        levelmanager = LevelManager.getInstance();
+        tilemapsAscending = levelmanager.getTilemapsAscending();
         int z = 0;
-        for (int i = 0; i < levelTilemapsAscending.Count; i++)
+        for (int i = 0; i < tilemapsAscending.Count; i++)
         {
             cellToCheck.z = i;
-            if (levelTilemapsAscending[i].HasTile(cellToCheck))
+            if (tilemapsAscending[i].HasTile(cellToCheck))
             {
                 z = i;
             }

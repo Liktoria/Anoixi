@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class LevelManager : MonoBehaviour
 {
     private float currentMana = 100.0f;
     private bool manaIncreasing = false;
     private static LevelManager instance;
+    [SerializeField]
+    private List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
 
 
     public static LevelManager getInstance()
@@ -40,5 +43,10 @@ public class LevelManager : MonoBehaviour
     public bool getManaIncreasing()
     {
         return manaIncreasing;
+    }
+
+    public List<Tilemap> getTilemapsAscending()
+    {
+        return levelTilemapsAscending;
     }
 }

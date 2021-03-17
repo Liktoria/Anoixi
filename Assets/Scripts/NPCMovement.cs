@@ -8,7 +8,6 @@ public class NPCMovement : MonoBehaviour
 {
     //speed the character is moving with
     public float movementSpeed = 1f;
-    public List<Tilemap> levelTilemapsAscending = new List<Tilemap>();
     public Tilemap groundTilemap;
 
     public List<Tile> grassTiles = new List<Tile>();
@@ -22,7 +21,8 @@ public class NPCMovement : MonoBehaviour
 
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
-
+    private LevelManager levelmanager;
+    private List<Tilemap> tilemapsAscending = new List<Tilemap>();
 
     //the renderer that will display the animation
     CharacterRenderer isoRenderer;
@@ -34,8 +34,9 @@ public class NPCMovement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponent<CharacterRenderer>();
+        levelmanager = LevelManager.getInstance();
+        tilemapsAscending = levelmanager.getTilemapsAscending();
     }
-
 
     // frame-independent function that uses the frequency of the physics system
     void FixedUpdate()
@@ -68,14 +69,14 @@ public class NPCMovement : MonoBehaviour
         characterPosition = transform.position;
         characterPosition.z = 0;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
-        currentCell.z = calculation.calculateCorrectZ(currentCell, levelTilemapsAscending);
+        currentCell.z = calculation.calculateCorrectZ(currentCell);
 
         if (gameObject.CompareTag("Demon"))
         {
-            if (isGrass(currentCell, levelTilemapsAscending[currentCell.z]))
+            if (isGrass(currentCell, tilemapsAscending[currentCell.z]))
             {
                 int randomGrassIndex = Random.Range(0, stoneTiles.Count - 1);
-                levelTilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomGrassIndex]);
+                tilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomGrassIndex]);
                 tileLost.Invoke();
                 for (int i = 0; i < decorations.Count; i++)
                 {
