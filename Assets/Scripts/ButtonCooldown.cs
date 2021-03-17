@@ -11,6 +11,8 @@ public class ButtonCooldown : MonoBehaviour
     private Button correspondingButton;
     [SerializeField]
     private float cooldownTime;
+    [SerializeField]
+    private bool isDaisies = false;
     private float cooldownStep;
     private bool cooldownStarted = false;
     private bool oldCooldownBool = false;
@@ -22,6 +24,11 @@ public class ButtonCooldown : MonoBehaviour
         cooldownProgress.BarValue = 0.0f;
         correspondingButton = GetComponent<Button>();
         cooldownStep = (100.0f / cooldownTime) / 10.0f;
+
+        if (!isDaisies)
+        {
+            correspondingButton.interactable = false;
+        }
     }
 
     void Update()
