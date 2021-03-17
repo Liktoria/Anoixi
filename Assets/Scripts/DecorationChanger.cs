@@ -16,6 +16,8 @@ public class DecorationChanger : MonoBehaviour
     private bool isColumn;
     [SerializeField]
     private int tilesCovered = 1;
+    [SerializeField]
+    private int plantIndexToUnlock;
     [Header("What should happen, when a column changed to its spring theme?")]
     public UnityEvent columnWon;
     [Header("What should happen, when a column changed back to its underworld theme?")]
@@ -42,7 +44,7 @@ public class DecorationChanger : MonoBehaviour
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         initializeSurroundingCells(cellUnderneath);
-        Debug.Log("number of tiles that have to be transformed: " + progressSuccess);
+        //Debug.Log("number of tiles that have to be transformed: " + progressSuccess);
     }
 
     private void initializeSurroundingCells(Vector3Int cellUnderneath)
@@ -92,12 +94,12 @@ public class DecorationChanger : MonoBehaviour
                 if(changedToGrass)
                 {
                     progressCounter++;
-                Debug.Log("current progress on column: " + progressCounter);
+                //Debug.Log("current progress on column: " + progressCounter);
                 }
                 else
                 {
                     progressCounter--;
-                    Debug.Log("current progress on column: " + progressCounter);
+                    //Debug.Log("current progress on column: " + progressCounter);
                     changeSprite(underworldSprite);
                     if(isColumn)
                     {

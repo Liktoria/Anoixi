@@ -38,7 +38,7 @@ public class Mana : MonoBehaviour
         }
         else
         {
-            levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.1f);
+            levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.05f);
             manaBar.BarValue = levelManager.getCurrentMana();
         }
 

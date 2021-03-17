@@ -36,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
         isoRenderer = GetComponent<CharacterRenderer>();
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
-        Debug.Log(calculation);
+        //Debug.Log(calculation);
     }
 
     // frame-independent function that uses the frequency of the physics system
