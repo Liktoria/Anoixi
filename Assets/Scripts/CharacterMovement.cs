@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.Events;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -10,14 +9,12 @@ public class CharacterMovement : MonoBehaviour
     public float movementSpeed = 1f;
     public Tilemap groundTilemap;
 
-    public List<Tile> grassTiles = new List<Tile>();
-    public List<Tile> stoneTiles = new List<Tile>();
-    public List<Tile> elevatedStoneTiles = new List<Tile>();
-    public List<Tile> elevatedGrassTiles = new List<Tile>();
-    public List<DecorationChanger> decorations = new List<DecorationChanger>();
-
-    [Header("What should happen, when a tile changes to grass?")]
-    public UnityEvent tileWon;
+    [SerializeField]
+    private List<Tile> grassTiles = new List<Tile>();
+    [SerializeField]
+    private List<Tile> stoneTiles = new List<Tile>();
+    [SerializeField]
+    private List<DecorationChanger> decorations = new List<DecorationChanger>();
 
     private LevelManager levelmanager;
     private ProgressController progressController;
