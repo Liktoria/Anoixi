@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.AI;
+using Pathfinding;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -39,10 +39,9 @@ public class NPCMovement : MonoBehaviour
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
-
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        Seeker seeker = GetComponent<Seeker>();
         determineGoal();
-        agent.destination = currentGoal.position;
+        seeker.StartPath(transform.position, currentGoal.position, OnPathComplete);
     }
 
     // frame-independent function that uses the frequency of the physics system
@@ -64,7 +63,7 @@ public class NPCMovement : MonoBehaviour
         setNewTile();
 
         //set direction for the renderer so it can figure out, what animation to play
-        isoRenderer.SetDirection(movement);
+        //isoRenderer.SetDirection(movement);
 
         //move the character
         //rbody.MovePosition(newPos);
@@ -139,5 +138,10 @@ public class NPCMovement : MonoBehaviour
     {
         int randomNumber = (int) Random.Range(0, goals.Count);
         currentGoal = goals[randomNumber];
+    }
+
+    public void OnPathComplete(Path p)
+    {
+        Debug.Log("Yay, we got a path back. Did it have an error? " + p.error);
     }
 }
