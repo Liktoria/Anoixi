@@ -22,6 +22,7 @@ public class NPCMovement : MonoBehaviour
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
     private LevelManager levelmanager;
+    private ProgressController progressController;
     private List<Tilemap> tilemapsAscending = new List<Tilemap>();
 
     //the renderer that will display the animation
@@ -30,12 +31,13 @@ public class NPCMovement : MonoBehaviour
     Rigidbody2D rbody;
 
     //On starting the game (function is called before Start()) get the necessary components from the character game object, the script is attached to
-    private void Awake()
+    private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponent<CharacterRenderer>();
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
+        progressController = ProgressController.getInstance();
     }
 
     // frame-independent function that uses the frequency of the physics system
@@ -77,7 +79,9 @@ public class NPCMovement : MonoBehaviour
             {
                 int randomGrassIndex = Random.Range(0, stoneTiles.Count - 1);
                 tilemapsAscending[currentCell.z].SetTile(currentCell, stoneTiles[randomGrassIndex]);
-                tileLost.Invoke();
+
+                progressController.updateLoseCondition(currentCell, false);
+
                 for (int i = 0; i < decorations.Count; i++)
                 {
                     if (decorations[i].surroundingCells.Contains(currentCell))

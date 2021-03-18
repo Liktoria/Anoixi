@@ -31,6 +31,7 @@ public class DecorationChanger : MonoBehaviour
     private int progressSuccess;
     private Calculations calculation = new Calculations();
     private LevelManager levelmanager;
+    private ProgressController progressController;
     private List<Tilemap> tilemapsAscending;
 
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class DecorationChanger : MonoBehaviour
         progressSuccess = 8;
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
+        progressController = ProgressController.getInstance();
         initializeSurroundingCells(cellUnderneath);
         //Debug.Log("number of tiles that have to be transformed: " + progressSuccess);
     }
@@ -103,7 +105,7 @@ public class DecorationChanger : MonoBehaviour
                     changeSprite(underworldSprite);
                     if(isColumn)
                     {
-                        columnLost.Invoke();
+                    progressController.updateWinCondition(false);
                     }
                 }
             }
@@ -113,7 +115,7 @@ public class DecorationChanger : MonoBehaviour
             changeSprite(springSprite);
             if(isColumn)
             {
-                columnWon.Invoke();
+                progressController.updateWinCondition(true);
             }
         }
     }

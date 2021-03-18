@@ -20,6 +20,7 @@ public class CharacterMovement : MonoBehaviour
     public UnityEvent tileWon;
 
     private LevelManager levelmanager;
+    private ProgressController progressController;
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
     private List<Tilemap> tilemapsAscending = new List<Tilemap>();
@@ -36,6 +37,7 @@ public class CharacterMovement : MonoBehaviour
         isoRenderer = GetComponent<CharacterRenderer>();
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
+        progressController = ProgressController.getInstance();
         //Debug.Log(calculation);
     }
 
@@ -80,7 +82,9 @@ public class CharacterMovement : MonoBehaviour
             {
                 int randomGrassIndex = Random.Range(0, grassTiles.Count - 1);
                 tilemapsAscending[currentCell.z].SetTile(currentCell, grassTiles[randomGrassIndex]);
-                tileWon.Invoke();
+
+                progressController.updateLoseCondition(currentCell, true);
+
                 for(int i = 0; i < decorations.Count; i++)
                 {
                     if (decorations[i].surroundingCells.Contains(currentCell))

@@ -5,41 +5,73 @@ using UnityEngine;
 //Tracks the progress made with planting in the level
 public class ProgressController : MonoBehaviour
 {
-    private int tilesToTransform = 0;
+    [SerializeField]
+    private int tilesToTransform = 45;
     private int tilesCurrentlyTransformed = 0;
-    private float currentProgress;
+    [SerializeField]
+    private int columnsToTransform = 5;
+    private int columnsTransformed = 0;
     public ProgressBar progressBar;
+    [SerializeField]
+    private List<Vector3Int> baseTiles = new List<Vector3Int>();
+    private static ProgressController instance;
+
+    public static ProgressController getInstance()
+    {
+        return instance;
+    }
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        //get total number of transformable tiles in the level by the static LevelController class
-        tilesToTransform = 97;
-        //get the number of already transformed tiles at the beginning of the level from LevelController class
-        tilesCurrentlyTransformed = 10;
-        progressBar.BarValue = (float) tilesCurrentlyTransformed / (float) tilesToTransform * 100;
+        progressBar.BarValue = 100.0f;
     }
 
     //one tile changed in favor of the player
-    public void updateProgressIncrease()
+    public void updateWinCondition(bool changedToSpring)
     {
-        tilesCurrentlyTransformed++;
-        //Debug.Log("tilesCurrentlyTransformed: " + tilesCurrentlyTransformed + "; tilesToTranform: " + tilesToTransform);
-        float newValue = (float) tilesCurrentlyTransformed / (float) tilesToTransform * 100;
-        //Debug.Log(newValue);
-        updateProgressBar(newValue);
-        if (tilesCurrentlyTransformed >= tilesToTransform)
+        if(changedToSpring)
+        {
+            columnsTransformed++;
+        }
+        else
+        {
+            columnsTransformed--;
+        }
+
+        if(columnsTransformed == columnsToTransform)
         {
             //level is won -> win screen is displayed
         }
     }
 
     //one tile changed in favor of the demons
-    public void updateProgressDecrease()
+    public void updateLoseCondition(Vector3Int changedTile, bool changedToGrass)
     {
-        tilesCurrentlyTransformed--;
-        float newValue = (float)tilesCurrentlyTransformed / (float)tilesToTransform * 100;
-        updateProgressBar(newValue);
-        if (tilesCurrentlyTransformed < -4)
+        if (baseTiles.Contains(changedTile))
+        {
+            if (changedToGrass)
+            {
+                tilesCurrentlyTransformed--;
+
+            }
+            else
+            {
+                tilesCurrentlyTransformed++;
+            }
+            float newValue = (float)tilesCurrentlyTransformed / (float)tilesToTransform * 100;
+            updateProgressBar(newValue);
+        }
+
+        if (tilesCurrentlyTransformed == tilesToTransform)
         {
             //level is lost -> loose screen is displayed
         }

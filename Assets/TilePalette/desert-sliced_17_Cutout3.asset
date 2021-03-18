@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: desert-sliced_17_Cutout3
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: b71129abb7e6a8b469a220dea8dfdec4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Transform:
     e00: 1
     e01: 0
