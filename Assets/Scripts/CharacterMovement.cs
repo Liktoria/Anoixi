@@ -70,6 +70,7 @@ public class CharacterMovement : MonoBehaviour
     {
         characterPosition = transform.position;
         characterPosition.z = 0;
+        characterPosition.y = characterPosition.y + 0.5f;
         Vector3Int currentCell = groundTilemap.WorldToCell(characterPosition);
         currentCell.z = calculation.calculateCorrectZ(currentCell);
 
