@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.Events;
+using UnityEngine.AI;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -10,14 +10,15 @@ public class NPCMovement : MonoBehaviour
     public float movementSpeed = 1f;
     public Tilemap groundTilemap;
 
-    public List<Tile> grassTiles = new List<Tile>();
-    public List<Tile> stoneTiles = new List<Tile>();
-    public List<Tile> elevatedStoneTiles = new List<Tile>();
-    public List<Tile> elevatedGrassTiles = new List<Tile>();
-    public List<DecorationChanger> decorations = new List<DecorationChanger>();
-
-    [Header("What should happen, when a tile changes to stone?")]
-    public UnityEvent tileLost;
+    [SerializeField]
+    private List<Tile> grassTiles = new List<Tile>();
+    [SerializeField]
+    private List<Tile> stoneTiles = new List<Tile>();
+    [SerializeField]
+    private List<DecorationChanger> decorations = new List<DecorationChanger>();
+    [SerializeField]
+    private List<Transform> goals = new List<Transform>();
+    private Transform currentGoal;
 
     private Vector3 characterPosition;
     private Calculations calculation = new Calculations();
@@ -38,23 +39,27 @@ public class NPCMovement : MonoBehaviour
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
+
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        determineGoal();
+        agent.destination = currentGoal.position;
     }
 
     // frame-independent function that uses the frequency of the physics system
     void FixedUpdate()
     {
         //get the current position of the character and the input from 'WASD'
-        Vector2 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        //Vector2 currentPos = rbody.position;
+        //float horizontalInput = Input.GetAxis("Horizontal");
+        //float verticalInput = Input.GetAxis("Vertical");
 
         //save the input into a vector and clamp it to prevent diagonal movement becoming faster than movement in the cardinal directions
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        //Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        //inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
         //multiply with movement speed and calculate the new position
-        Vector2 movement = inputVector * movementSpeed;
-        Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; //use Time.fixedDeltaTime to make sure the movement is stable across different frame rates
+        //Vector2 movement = inputVector * movementSpeed;
+        //Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; //use Time.fixedDeltaTime to make sure the movement is stable across different frame rates
 
         setNewTile();
 
@@ -62,8 +67,8 @@ public class NPCMovement : MonoBehaviour
         isoRenderer.SetDirection(movement);
 
         //move the character
-        rbody.MovePosition(newPos);
-        transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+        //rbody.MovePosition(newPos);
+        //transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
     }
 
     private void setNewTile()
@@ -128,5 +133,11 @@ public class NPCMovement : MonoBehaviour
             Debug.Log("Found a grass tile.");
         }
         return isGrass;
+    }
+
+    private void determineGoal()
+    {
+        int randomNumber = (int) Random.Range(0, goals.Count);
+        currentGoal = goals[randomNumber];
     }
 }
