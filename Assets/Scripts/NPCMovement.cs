@@ -11,6 +11,8 @@ public class NPCMovement : MonoBehaviour
     public Tilemap groundTilemap;
 
     [SerializeField]
+    private AIPath aiPath;
+    [SerializeField]
     private List<Tile> grassTiles = new List<Tile>();
     [SerializeField]
     private List<Tile> stoneTiles = new List<Tile>();
@@ -53,7 +55,7 @@ public class NPCMovement : MonoBehaviour
         //float verticalInput = Input.GetAxis("Vertical");
 
         //save the input into a vector and clamp it to prevent diagonal movement becoming faster than movement in the cardinal directions
-        //Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        //Vector2 inputVector = aiPath.desiredVelocity.x;
         //inputVector = Vector2.ClampMagnitude(inputVector, 1);
         
         //multiply with movement speed and calculate the new position
