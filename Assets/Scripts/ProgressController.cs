@@ -16,7 +16,9 @@ public class ProgressController : MonoBehaviour
     [SerializeField]
     private ProgressBar progressBar;
     [SerializeField]
-    private TMP_Text progressText;
+    private TMP_Text currentColumnsText;
+    [SerializeField]
+    private TMP_Text totalColumnsText;
     [SerializeField]
     private List<Vector3Int> baseTiles = new List<Vector3Int>();
     private LoadingManager loadingManager;
@@ -40,7 +42,7 @@ public class ProgressController : MonoBehaviour
     {
         progressBar.BarValue = 100.0f;
         loadingManager = GetComponent<LoadingManager>();
-        updateText();
+        totalColumnsText.text = "" + columnsToTransform + "";
     }
 
     //one tile changed in favor of the player
@@ -95,6 +97,6 @@ public class ProgressController : MonoBehaviour
 
     private void updateText()
     {
-        progressText.text = "" + columnsTransformed + " / " + columnsToTransform + " columns transformed";
+        currentColumnsText.text = "" + columnsTransformed + "";
     }
 }
