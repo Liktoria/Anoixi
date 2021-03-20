@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class flowerCollisionPollen : MonoBehaviour
 {
-    [SerializeField]
     private LevelManager levelmanager;
+    public UnityEvent onPollenCollision;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class flowerCollisionPollen : MonoBehaviour
         {
             //TODO: animation and sneezing sound
             levelmanager.reduceDemonCount();
+            onPollenCollision.Invoke();
             Destroy(other.gameObject);
         }
     }
