@@ -8,7 +8,7 @@ public class NPCMovement : MonoBehaviour
 {
     //speed the character is moving with
     public float movementSpeed = 1f;
-    public Tilemap groundTilemap;
+    private Tilemap groundTilemap;
 
     [SerializeField]
     private AIPath aiPath;
@@ -16,9 +16,7 @@ public class NPCMovement : MonoBehaviour
     private List<Tile> grassTiles = new List<Tile>();
     [SerializeField]
     private List<Tile> stoneTiles = new List<Tile>();
-    [SerializeField]
     private List<DecorationChanger> decorations = new List<DecorationChanger>();
-    [SerializeField]
     private List<Transform> goals = new List<Transform>();
     private Transform currentGoal;
 
@@ -27,6 +25,9 @@ public class NPCMovement : MonoBehaviour
     private LevelManager levelmanager;
     private ProgressController progressController;
     private List<Tilemap> tilemapsAscending = new List<Tilemap>();
+    private Seeker seeker;
+    private int stuckCounter;
+    private bool pathRecalculated = false;
 
     //the renderer that will display the animation
     CharacterRenderer isoRenderer;
@@ -41,7 +42,10 @@ public class NPCMovement : MonoBehaviour
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
-        Seeker seeker = GetComponent<Seeker>();
+        decorations = levelmanager.getDecorations();
+        goals = levelmanager.getGoals();
+        groundTilemap = levelmanager.getTilemapsAscending()[0];
+        seeker = GetComponent<Seeker>();
         determineGoal();
         seeker.StartPath(transform.position, currentGoal.position, OnPathComplete);
     }
@@ -49,27 +53,57 @@ public class NPCMovement : MonoBehaviour
     // frame-independent function that uses the frequency of the physics system
     void FixedUpdate()
     {
-        //get the current position of the character and the input from 'WASD'
-        //Vector2 currentPos = rbody.position;
-        //float horizontalInput = Input.GetAxis("Horizontal");
-        //float verticalInput = Input.GetAxis("Vertical");
+        Vector2 movement = new Vector2(0, 0);
 
-        //save the input into a vector and clamp it to prevent diagonal movement becoming faster than movement in the cardinal directions
-        //Vector2 inputVector = aiPath.desiredVelocity.x;
-        //inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        
-        //multiply with movement speed and calculate the new position
-        //Vector2 movement = inputVector * movementSpeed;
-        //Vector2 newPos = currentPos + movement * Time.fixedDeltaTime; //use Time.fixedDeltaTime to make sure the movement is stable across different frame rates
-
+        Vector3 lastPosition = characterPosition;
         setNewTile();
+        if(aiPath.desiredVelocity.x > 0.01f && aiPath.desiredVelocity.y > 0.01f)
+        {
+            movement = Vector2.one; //(1,1)
+        }
+        else if(aiPath.desiredVelocity.x > 0.01f && aiPath.desiredVelocity.y < -0.01f)
+        {
+            movement = new Vector2(1, -1);
+        }
+        else if(aiPath.desiredVelocity.x < -0.01f && aiPath.desiredVelocity.y > 0.01f)
+        {
+            movement = new Vector2(-1, 1);
+        }
+        else if(aiPath.desiredVelocity.x < -0.01f && aiPath.desiredVelocity.y < -0.01f)
+        {
+            movement = new Vector2(-1, -1);
+        }
 
         //set direction for the renderer so it can figure out, what animation to play
-        //isoRenderer.SetDirection(movement);
+        isoRenderer.SetDirection(movement);
 
-        //move the character
-        //rbody.MovePosition(newPos);
-        //transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+        //if the demon gets stuck
+        //recalculate the path
+        if(lastPosition == transform.position)
+        {
+            stuckCounter++;
+            if(stuckCounter >= 200)
+            {
+                if (!pathRecalculated)
+                {
+                    stuckCounter = 0;
+                    aiPath.SearchPath();
+                    pathRecalculated = true;
+                }
+                else
+                {
+                    startNewPath();
+                    pathRecalculated = false;
+                }
+            }
+        }
+        //if the destination is reached
+        //set a new path
+        if(aiPath.reachedDestination)
+        {
+            startNewPath();
+        }
+        
     }
 
     private void setNewTile()
@@ -112,7 +146,7 @@ public class NPCMovement : MonoBehaviour
         if (i < stoneTiles.Count)
         {
             isStone = true;
-            Debug.Log("Found a stone tile.");
+            //Debug.Log("Found a stone tile.");
         }
         return isStone;
     }
@@ -131,7 +165,7 @@ public class NPCMovement : MonoBehaviour
         if (i < grassTiles.Count)
         {
             isGrass = true;
-            Debug.Log("Found a grass tile.");
+            //Debug.Log("Found a grass tile.");
         }
         return isGrass;
     }
@@ -145,5 +179,11 @@ public class NPCMovement : MonoBehaviour
     public void OnPathComplete(Path p)
     {
         Debug.Log("Yay, we got a path back. Did it have an error? " + p.error);
+    }
+
+    private void startNewPath()
+    {
+        determineGoal();
+        seeker.StartPath(transform.position, currentGoal.position, OnPathComplete);
     }
 }

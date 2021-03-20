@@ -64,4 +64,14 @@ public class ButtonCooldown : MonoBehaviour
             cooldownProgress.BarValue = cooldownProgress.BarValue + cooldownStep;
         }
     }
+
+    public void activateButton()
+    {
+        correspondingButton.interactable = true;
+    }
+
+    public void deactivateButton()
+    {
+        correspondingButton.interactable = false;
+    }
 }

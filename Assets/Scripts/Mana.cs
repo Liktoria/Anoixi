@@ -8,6 +8,7 @@ public class Mana : MonoBehaviour
 {
     public ProgressBar manaBar;
     private LevelManager levelManager;
+    private float manaIncrease = 0.01f;
 
 
     // Start is called before the first frame update
@@ -38,7 +39,7 @@ public class Mana : MonoBehaviour
         }
         else
         {
-            levelManager.setCurrentMana(levelManager.getCurrentMana() + 0.05f);
+            levelManager.setCurrentMana(levelManager.getCurrentMana() + manaIncrease);
             manaBar.BarValue = levelManager.getCurrentMana();
         }
 
@@ -47,5 +48,10 @@ public class Mana : MonoBehaviour
             levelManager.setCurrentMana(100.0f);
             return;
         }
+    }
+
+    public void setManaIncrease(float newIncreaseValue)
+    {
+        manaIncrease = newIncreaseValue;
     }
 }

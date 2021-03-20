@@ -105,7 +105,8 @@ public class DecorationChanger : MonoBehaviour
                     changeSprite(underworldSprite);
                     if(isColumn)
                     {
-                    progressController.updateWinCondition(false);
+                        progressController.updateWinCondition(false);
+                        columnLost.Invoke();
                     }
                 }
             }
@@ -116,6 +117,7 @@ public class DecorationChanger : MonoBehaviour
             if(isColumn)
             {
                 progressController.updateWinCondition(true);
+                columnWon.Invoke();
             }
         }
     }

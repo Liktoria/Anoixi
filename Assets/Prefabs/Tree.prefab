@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5096835034095748528}
   - component: {fileID: 5096835034095748529}
   - component: {fileID: 5096835034095748527}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5096835034577509212}
   - component: {fileID: 5096835034577509210}
   - component: {fileID: 5096835034577509211}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}

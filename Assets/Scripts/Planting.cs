@@ -14,7 +14,7 @@ public class Planting : MonoBehaviour
     private Mana myMana;
     private int plantIndex = 100;
     private bool[] plantable;
-    private float[] manaValues = { 10.0f, 5.0f, 20.0f, 15.0f, 40.0f };
+    private float[] manaValues = { 15.0f, 30.0f, 22.0f, 25.0f, 40.0f };
     //private Calculations calculation = new Calculations();
 
     //the position the character is currently placed at in world coordinates
@@ -81,6 +81,7 @@ public class Planting : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Not enough mana.");
                     //can't plant stuff cause not enough mana
                     // TODO: display text/animation and stuff
                 }
@@ -102,19 +103,19 @@ public class Planting : MonoBehaviour
         switch (currentIndex)
         {
             case 0:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(3);
                 break;
             case 1:
-                yield return new WaitForSeconds(0);
+                yield return new WaitForSeconds(12);
                 break;
             case 2:
-                yield return new WaitForSeconds(0);
+                yield return new WaitForSeconds(7);
                 break;
             case 3:
-                yield return new WaitForSeconds(0);
+                yield return new WaitForSeconds(7);
                 break;
             case 4:
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(17);
                 break;
         }
         //plantButtons[currentIndex].enabled = true;

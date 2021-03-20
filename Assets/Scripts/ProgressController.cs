@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 //Tracks the progress made with planting in the level
 public class ProgressController : MonoBehaviour
@@ -11,9 +13,13 @@ public class ProgressController : MonoBehaviour
     [SerializeField]
     private int columnsToTransform = 5;
     private int columnsTransformed = 0;
-    public ProgressBar progressBar;
+    [SerializeField]
+    private ProgressBar progressBar;
+    [SerializeField]
+    private TMP_Text progressText;
     [SerializeField]
     private List<Vector3Int> baseTiles = new List<Vector3Int>();
+    private LoadingManager loadingManager;
     private static ProgressController instance;
 
     public static ProgressController getInstance()
@@ -33,6 +39,8 @@ public class ProgressController : MonoBehaviour
     void Start()
     {
         progressBar.BarValue = 100.0f;
+        loadingManager = GetComponent<LoadingManager>();
+        updateText();
     }
 
     //one tile changed in favor of the player
@@ -41,15 +49,18 @@ public class ProgressController : MonoBehaviour
         if(changedToSpring)
         {
             columnsTransformed++;
+            updateText();
         }
         else
         {
             columnsTransformed--;
+            updateText();
         }
 
         if(columnsTransformed == columnsToTransform)
         {
             //level is won -> win screen is displayed
+            loadingManager.loadScene("YouWon");
         }
     }
 
@@ -61,24 +72,29 @@ public class ProgressController : MonoBehaviour
             if (changedToGrass)
             {
                 tilesCurrentlyTransformed--;
-
             }
             else
             {
                 tilesCurrentlyTransformed++;
             }
-            float newValue = (float)tilesCurrentlyTransformed / (float)tilesToTransform * 100;
+            float newValue = 100.0f - ((float)tilesCurrentlyTransformed / (float)tilesToTransform * 100);
             updateProgressBar(newValue);
         }
 
         if (tilesCurrentlyTransformed == tilesToTransform)
         {
             //level is lost -> loose screen is displayed
+            loadingManager.loadScene("YouLost");
         }
     }
 
     private void updateProgressBar (float newValue)
     {
         progressBar.BarValue = newValue;
+    }
+
+    private void updateText()
+    {
+        progressText.text = "" + columnsTransformed + " / " + columnsToTransform + " columns transformed";
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Demon
   - Flower
+  - Column
   layers:
   - Default
   - TransparentFX
@@ -15,12 +16,12 @@ TagManager:
   - UI
   - 
   - 
-  - Obstacle
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - FlyingDemons
+  - WalkingDemons
+  - Bushes
+  - Trees
+  - Obstacles
   - 
   - 
   - 

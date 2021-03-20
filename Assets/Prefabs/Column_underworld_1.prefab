@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8122132723043273808}
   m_Layer: 0
   m_Name: Column_underworld_1
-  m_TagString: Untagged
+  m_TagString: Column
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,9 +96,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0.3}
-  m_Size: {x: 0.5, y: 0.7}
-  m_Direction: 0
+  m_Offset: {x: 0.03, y: 0.2}
+  m_Size: {x: 0.5, y: 0.4}
+  m_Direction: 1
 --- !u!114 &8122132723043273808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   groundTilemap: {fileID: 0}
   isColumn: 1
   tilesCovered: 1
+  plantIndexToUnlock: 0
   columnWon:
     m_PersistentCalls:
       m_Calls: []

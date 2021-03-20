@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: S Fly
+  m_Name: SE Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 80.32101}
+        value: {x: 0, y: 0, z: -54.509003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -28,7 +28,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 40.235}
+        value: {x: 0, y: 0, z: 0.72400004}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -37,7 +37,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 80.32101}
+        value: {x: 0, y: 0, z: -54.509003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -47,13 +47,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/R Wing B1
+    path: Flying Demon FD/Body B/L Wing B1
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -6.2760005}
+        value: {x: 0, y: 0, z: 11.027}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -62,7 +62,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -29.826002}
+        value: {x: 0, y: 0, z: 38.098003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -71,7 +71,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -6.2760005}
+        value: {x: 0, y: 0, z: 11.027}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -81,13 +81,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -80.176}
+        value: {x: 0, y: 0, z: 73.871}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -96,7 +96,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -90.464005}
+        value: {x: 0, y: 0, z: 89.18101}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -105,7 +105,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -80.176}
+        value: {x: 0, y: 0, z: 73.871}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -115,13 +115,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -69.41901}
+        value: {x: 0, y: 0, z: 114.36001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -130,7 +130,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -17.880001}
+        value: {x: 0, y: 0, z: 89.102005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -139,7 +139,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -69.41901}
+        value: {x: 0, y: 0, z: 114.36001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -149,13 +149,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/R Wing B1
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 1.9520001}
+        value: {x: 0, y: 0, z: -23.199001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -164,7 +164,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 24.296001}
+        value: {x: 0, y: 0, z: -63.489002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -173,7 +173,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 1.9520001}
+        value: {x: 0, y: 0, z: -23.199001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -183,13 +183,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 80.80701}
+        value: {x: 0, y: 0, z: -73.583}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -198,7 +198,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 95.506004}
+        value: {x: 0, y: 0, z: -85.55}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -207,7 +207,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 80.80701}
+        value: {x: 0, y: 0, z: -73.583}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -217,13 +217,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -10.198001}
+        value: {x: 0, y: 0, z: 19.401001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -232,7 +232,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 6.6480002}
+        value: {x: 0, y: 0, z: 0.27}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -241,7 +241,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.75
-        value: {x: 0, y: 0, z: -15.062}
+        value: {x: 0, y: 0, z: 30.402002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -250,7 +250,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: -10.198001}
+        value: {x: 0, y: 0, z: 19.401001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -260,13 +260,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 17.096}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -275,7 +275,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 31.897001}
+        value: {x: 0, y: 0, z: -20.857}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -284,7 +284,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.75
-        value: {x: 0, y: 0, z: -7.7700005}
+        value: {x: 0, y: 0, z: 6.491}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -293,7 +293,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 17.096}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -303,13 +303,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 4.625}
+        value: {x: 0, y: 0, z: 13.347001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -318,7 +318,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 20.338001}
+        value: {x: 0, y: 0, z: -1.529}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -327,7 +327,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.75
-        value: {x: 0, y: 0, z: -19.287}
+        value: {x: 0, y: 0, z: 21.045}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -336,7 +336,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 4.625}
+        value: {x: 0, y: 0, z: 13.347001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -346,13 +346,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0.535}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -361,7 +361,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 14.336}
+        value: {x: 0, y: 0, z: -21.578001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -370,7 +370,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.75
-        value: {x: 0, y: 0, z: -32.140003}
+        value: {x: 0, y: 0, z: 20.185001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -379,7 +379,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: 0, y: 0, z: 0.535}
+        value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -389,14 +389,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.04546815, y: 1.333183, z: 0}
+        value: {x: -0.1153558, y: 1.3931084, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -405,7 +405,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: -0.039302208, y: 1.24686, z: 0}
+        value: {x: -0.11535575, y: 1.3437688, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -414,7 +414,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: -0.04546815, y: 1.333183, z: 0}
+        value: {x: -0.1153558, y: 1.3931084, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -424,8 +424,33 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Flying Demon F/Body B
-  m_ScaleCurves: []
+    path: Flying Demon FD/Body B
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 1
+        value: {x: -1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: 
   m_FloatCurves:
   - curve:
       serializedVersion: 2
@@ -488,7 +513,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -497,7 +522,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -516,7 +541,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -525,7 +550,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -548,77 +573,77 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1712528966
+      path: 3906870755
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4150034174
+      path: 3693664516
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 370526436
+      path: 270291070
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4192543777
+      path: 1186753493
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2472470301
+      path: 3089776871
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4113071259
+      path: 4079084545
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2746026080
+      path: 485771156
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1416320563
+      path: 613328607
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1655097129
+      path: 1845274400
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 846391192
+      path: 2311982102
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3360361580
+      path: 2235728738
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -650,6 +675,13 @@ AnimationClip:
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 0
+      attribute: 3
+      script: {fileID: 0}
+      typeID: 4
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -735,7 +767,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -744,7 +776,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -763,7 +795,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -772,7 +804,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -791,16 +823,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
+        value: -1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -809,7 +832,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: -1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -819,8 +842,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/R Wing B1
+    attribute: m_LocalScale.x
+    path: 
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -828,16 +851,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -846,7 +860,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -856,8 +870,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/R Wing B1
+    attribute: m_LocalScale.y
+    path: 
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -865,16 +879,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 80.32101
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 40.235
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -883,7 +888,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 80.32101
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -893,119 +898,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/R Wing B1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -6.2760005
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: -29.826002
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: -6.2760005
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
+    attribute: m_LocalScale.z
+    path: 
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1042,7 +936,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1079,7 +973,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1087,7 +981,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -80.176
+        value: -54.509003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1096,7 +990,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -90.464005
+        value: 0.72400004
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1105,7 +999,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -80.176
+        value: -54.509003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1116,7 +1010,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1153,7 +1047,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1190,7 +1084,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1198,7 +1092,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -69.41901
+        value: 11.027
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1207,7 +1101,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -17.880001
+        value: 38.098003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1216,7 +1110,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -69.41901
+        value: 11.027
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1227,7 +1121,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1264,7 +1158,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1301,7 +1195,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1309,7 +1203,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.9520001
+        value: 73.871
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1318,7 +1212,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 24.296001
+        value: 89.18101
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1327,7 +1221,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 1.9520001
+        value: 73.871
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1338,7 +1232,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1375,7 +1269,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1412,7 +1306,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1420,7 +1314,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 80.80701
+        value: 114.36001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1429,7 +1323,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 95.506004
+        value: 89.102005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1438,7 +1332,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 80.80701
+        value: 114.36001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1449,7 +1343,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1457,7 +1351,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.04546815
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1466,7 +1360,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.039302208
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1475,7 +1369,229 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -0.04546815
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -23.199001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -63.489002
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -23.199001
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -73.583
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -85.55
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -73.583
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.1153558
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.11535575
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -0.1153558
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1486,7 +1602,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Flying Demon F/Body B
+    path: Flying Demon FD/Body B
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1494,7 +1610,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.333183
+        value: 1.3931084
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1503,7 +1619,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.24686
+        value: 1.3437688
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1512,7 +1628,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 1.333183
+        value: 1.3931084
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1523,7 +1639,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Flying Demon F/Body B
+    path: Flying Demon FD/Body B
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1560,7 +1676,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Flying Demon F/Body B
+    path: Flying Demon FD/Body B
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1606,7 +1722,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1652,7 +1768,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1660,7 +1776,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -10.198001
+        value: 19.401001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1669,7 +1785,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 6.6480002
+        value: 0.27
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1678,7 +1794,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -15.062
+        value: 30.402002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1687,7 +1803,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -10.198001
+        value: 19.401001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1698,7 +1814,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1744,7 +1860,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1790,7 +1906,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1798,7 +1914,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 17.096
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1807,7 +1923,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 31.897001
+        value: -20.857
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1816,7 +1932,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -7.7700005
+        value: 6.491
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1825,7 +1941,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 17.096
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1836,7 +1952,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1882,7 +1998,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1928,7 +2044,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1936,7 +2052,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 4.625
+        value: 13.347001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1945,7 +2061,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 20.338001
+        value: -1.529
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1954,7 +2070,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -19.287
+        value: 21.045
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1963,7 +2079,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 4.625
+        value: 13.347001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1974,7 +2090,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2020,7 +2136,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2066,7 +2182,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2074,7 +2190,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.535
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2083,7 +2199,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 14.336
+        value: -21.578001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2092,7 +2208,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -32.140003
+        value: 20.185001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2101,7 +2217,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.535
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2112,7 +2228,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -2123,7 +2239,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2133,7 +2249,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2143,7 +2259,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2/L Wing B3
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2153,7 +2269,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/R Wing B1
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2163,7 +2279,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/R Wing B1
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2173,7 +2289,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/R Wing B1
+    path: Flying Demon FD/Body B/L Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2183,7 +2299,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2193,7 +2309,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2203,7 +2319,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2213,7 +2329,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2223,7 +2339,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2233,7 +2349,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3
+    path: Flying Demon FD/Body B/L Wing B1/L Wing B2/L Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2243,7 +2359,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2253,7 +2369,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2263,7 +2379,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/L Wing B1
+    path: Flying Demon FD/Body B/R Wing B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2273,7 +2389,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2283,7 +2399,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2293,7 +2409,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/L Wing B1/L Wing B2
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2303,7 +2419,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2313,7 +2429,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2323,7 +2439,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2
+    path: Flying Demon FD/Body B/Tail B1/Tail B2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2333,7 +2449,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2343,7 +2459,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2353,7 +2469,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/R Wing B1/R Wing B2/R Wing B3
+    path: Flying Demon FD/Body B/R Wing B1/R Wing B2/R Wing B3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2363,7 +2479,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2373,7 +2489,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2383,7 +2499,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/Tail B1
+    path: Flying Demon FD/Body B/Tail B1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2393,7 +2509,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2403,7 +2519,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2413,7 +2529,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Flying Demon F/Body B/Tail B1/Tail B2/Tail B3/Tail B4
+    path: Flying Demon FD/Body B/Tail B1/Tail B2/Tail B3/Tail B4
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
