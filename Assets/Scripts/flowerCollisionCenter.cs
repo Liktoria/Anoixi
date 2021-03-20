@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class flowerCollisionCenter : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class flowerCollisionCenter : MonoBehaviour
     private LevelManager levelManager;
     private bool oldManaIncreasing = false;
     private AudioSource bitingAudio;
+    //public UnityEvent OnFlowerEaten;
 
     //private bool manaIncreasing = false;
 
@@ -40,8 +42,7 @@ public class flowerCollisionCenter : MonoBehaviour
         else if (other.gameObject.tag == "Demon")
         {
             //demon eats flower
-            bitingAudio.Play();
-            Destroy(transform.parent.gameObject);
+            StartCoroutine("playAudioAndDestroy");
         }
     }
 
@@ -53,5 +54,13 @@ public class flowerCollisionCenter : MonoBehaviour
                 //playerCollisionEnded.Invoke();
                 levelManager.setManaIncreasing(false);
         }
+    }
+
+    IEnumerator playAudioAndDestroy()
+    {
+        bitingAudio.Play();
+        while (bitingAudio.isPlaying)
+            yield return null;
+        Destroy(transform.parent.gameObject);
     }
 }
