@@ -21,6 +21,11 @@ public class ProgressController : MonoBehaviour
     private TMP_Text totalColumnsText;
     [SerializeField]
     private List<Vector3Int> baseTiles = new List<Vector3Int>();
+    //[SerializeField]
+    //private AudioSource loseSound;
+    //[SerializeField]
+    //private AudioSource winSound;
+
     private LoadingManager loadingManager;
     private static ProgressController instance;
 

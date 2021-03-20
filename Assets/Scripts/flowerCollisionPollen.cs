@@ -19,7 +19,7 @@ public class flowerCollisionPollen : MonoBehaviour
             //TODO: animation and sneezing sound
             levelmanager.reduceDemonCount();
             sneezingSound.Play();
-            Destroy(other.gameObject, 0.6f);
+            Destroy(other.gameObject, 0.4f);
         }
     }
 }
