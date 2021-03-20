@@ -60,7 +60,10 @@ public class ProgressController : MonoBehaviour
         }
         else
         {
-            columnsTransformed--;
+            if (columnsTransformed > 0)
+            {
+                columnsTransformed--;
+            }
             updateText();
         }
 
