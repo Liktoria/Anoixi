@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterRenderer : MonoBehaviour
+public class NPCRenderer : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "N Idle", "NW Idle", "SW Idle", "S Idle", "SE Idle", "NE Idle" };
     public static readonly string[] runDirections = { "N Walk", "NW Walk", "SW Walk", "S Walk", "SE Walk", "NE Walk" };
     //public static readonly string[] flyDirections = { "N Fly", "NW Fly", "SW Fly", "S Fly", "SE Fly", "NE Fly" };
     public bool hasIdleAnimation;
-    [SerializeField]
-    private AudioSource stepSound;
-    private float loopInterval = 0.5f;
-    private bool isSoundPlaying = false;
     Animator animator;
     int lastDirection;
 
@@ -34,7 +30,6 @@ public class CharacterRenderer : MonoBehaviour
             //if we are basically standing still, we'll use the Static states
             //we won't be able to calculate a direction if the user isn't pressing one, anyway!
             directionArray = staticDirections;
-            stopSound();
         }
         else
         {
@@ -43,10 +38,6 @@ public class CharacterRenderer : MonoBehaviour
             //save the answer to lastDirection
             directionArray = runDirections;
             lastDirection = DirectionToIndex(direction, 6);
-            if(!isSoundPlaying)
-            {
-                startSoundLoop(loopInterval);
-            }
         }
 
         //tell the animator to play the requested state
@@ -101,22 +92,5 @@ public class CharacterRenderer : MonoBehaviour
         }
         //we're done!
         return hashArray;
-    }
-
-    private void startSoundLoop(float loopInterval)
-    {
-        isSoundPlaying = true;
-        InvokeRepeating("playSound", 0f, loopInterval);
-    }
-
-    private void stopSound()
-    {
-        CancelInvoke();
-        isSoundPlaying = false;
-    }
-
-    private void playSound()
-    {
-        stepSound.Play();
     }
 }

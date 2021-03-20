@@ -22,6 +22,8 @@ public class Planting : MonoBehaviour
     //the distance between the clicked spot and the character
     private float distanceToCharacter = 0.0f;
     private LevelManager levelManager;
+    [SerializeField]
+    private AudioSource plantingSound;
 
     void Start()
     {
@@ -73,6 +75,7 @@ public class Planting : MonoBehaviour
             {
                 if (levelManager.getCurrentMana() >= manaValues[plantIndex])
                 {
+                    plantingSound.Play();
                     plantable[plantIndex] = false;
                     Instantiate(plantPrefabs[plantIndex], clickPosition, Quaternion.identity);
                     myMana.useMana(manaValues[plantIndex]);

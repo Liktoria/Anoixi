@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class flowerCollisionPollen : MonoBehaviour
 {
     private LevelManager levelmanager;
-    public UnityEvent onPollenCollision;
+    private AudioSource sneezingSound;
 
     void Start()
     {
         levelmanager = LevelManager.getInstance();
+        sneezingSound = GetComponent<AudioSource>();
     }
     protected void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,8 +18,8 @@ public class flowerCollisionPollen : MonoBehaviour
         {
             //TODO: animation and sneezing sound
             levelmanager.reduceDemonCount();
-            onPollenCollision.Invoke();
-            Destroy(other.gameObject);
+            sneezingSound.Play();
+            Destroy(other.gameObject, 0.6f);
         }
     }
 }

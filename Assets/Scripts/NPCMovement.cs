@@ -30,7 +30,7 @@ public class NPCMovement : MonoBehaviour
     private bool pathRecalculated = false;
 
     //the renderer that will display the animation
-    CharacterRenderer isoRenderer;
+    NPCRenderer isoRenderer;
 
     Rigidbody2D rbody;
 
@@ -38,7 +38,7 @@ public class NPCMovement : MonoBehaviour
     private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-        isoRenderer = GetComponent<CharacterRenderer>();
+        isoRenderer = GetComponent<NPCRenderer>();
         levelmanager = LevelManager.getInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
