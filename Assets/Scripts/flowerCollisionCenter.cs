@@ -20,7 +20,7 @@ public class flowerCollisionCenter : MonoBehaviour
     {
         player = GameObject.Find("Player");
         myMana = player.GetComponent<Mana>();
-        levelManager = LevelManager.getInstance();
+        levelManager = LevelManager.GetInstance();
         bitingAudio = GetComponent<AudioSource>();
     }
 
@@ -30,7 +30,7 @@ public class flowerCollisionCenter : MonoBehaviour
         {
             oldManaIncreasing = levelManager.getManaIncreasing();
             levelManager.setManaIncreasing(true);
-            if (oldManaIncreasing != levelManager.getManaIncreasing() && levelManager.getCurrentMana() < 100)
+            if (oldManaIncreasing != levelManager.getManaIncreasing() && levelManager.GetCurrentMana() < 100)
             {
                 //mana starts filling up
                 //playerCollisionStarted.Invoke();

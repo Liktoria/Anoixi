@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Spawning spawner;
 
-    public static LevelManager getInstance()
+    public static LevelManager GetInstance()
     {
         return instance;
     }
@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         manaIncreasing = newValue;
     }
 
-    public float getCurrentMana()
+    public float GetCurrentMana()
     {
         return currentMana;
     }

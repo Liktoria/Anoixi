@@ -36,7 +36,7 @@ public class ButtonCooldown : MonoBehaviour
 
     }
 
-    public void startCooldown()
+    public void StartCooldown()
     {
         oldCooldownBool = cooldownStarted;
         cooldownStarted = true;

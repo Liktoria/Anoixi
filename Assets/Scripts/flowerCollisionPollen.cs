@@ -9,7 +9,7 @@ public class flowerCollisionPollen : MonoBehaviour
 
     void Start()
     {
-        levelmanager = LevelManager.getInstance();
+        levelmanager = LevelManager.GetInstance();
         sneezingSound = GetComponent<AudioSource>();
     }
     protected void OnTriggerEnter2D(Collider2D other)

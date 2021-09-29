@@ -10,7 +10,7 @@ public class Calculations
 
     public int calculateCorrectZ(Vector3Int cellToCheck)
     {
-        levelmanager = LevelManager.getInstance();
+        levelmanager = LevelManager.GetInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         int z = 0;
         for (int i = 0; i < tilemapsAscending.Count; i++)

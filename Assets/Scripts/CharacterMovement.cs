@@ -32,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponent<CharacterRenderer>();
-        levelmanager = LevelManager.getInstance();
+        levelmanager = LevelManager.GetInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
         //Debug.Log(calculation);

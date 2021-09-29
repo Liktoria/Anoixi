@@ -14,20 +14,20 @@ public class Mana : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelManager = LevelManager.getInstance();
+        levelManager = LevelManager.GetInstance();
         levelManager.setCurrentMana(100.0f);
-        manaBar.BarValue = levelManager.getCurrentMana();
+        manaBar.BarValue = levelManager.GetCurrentMana();
 
     }
 
-    public void useMana(float value)
+    public void UseMana(float value)
     {
-        levelManager.setCurrentMana(levelManager.getCurrentMana() - value);
-        if (levelManager.getCurrentMana() < 0.0f)
+        levelManager.setCurrentMana(levelManager.GetCurrentMana() - value);
+        if (levelManager.GetCurrentMana() < 0.0f)
         {
             levelManager.setCurrentMana(0.0f);
         }
-        manaBar.BarValue = levelManager.getCurrentMana();
+        manaBar.BarValue = levelManager.GetCurrentMana();
     }
 
     public void increaseMana()
@@ -39,11 +39,11 @@ public class Mana : MonoBehaviour
         }
         else
         {
-            levelManager.setCurrentMana(levelManager.getCurrentMana() + manaIncrease);
-            manaBar.BarValue = levelManager.getCurrentMana();
+            levelManager.setCurrentMana(levelManager.GetCurrentMana() + manaIncrease);
+            manaBar.BarValue = levelManager.GetCurrentMana();
         }
 
-        if (levelManager.getCurrentMana() >= 100.0f)
+        if (levelManager.GetCurrentMana() >= 100.0f)
         {
             levelManager.setCurrentMana(100.0f);
             return;

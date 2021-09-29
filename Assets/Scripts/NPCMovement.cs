@@ -39,7 +39,7 @@ public class NPCMovement : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponent<NPCRenderer>();
-        levelmanager = LevelManager.getInstance();
+        levelmanager = LevelManager.GetInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
         decorations = levelmanager.getDecorations();

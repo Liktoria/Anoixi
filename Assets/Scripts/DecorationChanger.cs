@@ -42,7 +42,7 @@ public class DecorationChanger : MonoBehaviour
         cellUnderneath = groundTilemap.WorldToCell(position);
         progressCounter = 0;
         progressSuccess = 8;
-        levelmanager = LevelManager.getInstance();
+        levelmanager = LevelManager.GetInstance();
         tilemapsAscending = levelmanager.getTilemapsAscending();
         progressController = ProgressController.getInstance();
         initializeSurroundingCells(cellUnderneath);
@@ -81,12 +81,6 @@ public class DecorationChanger : MonoBehaviour
             surroundingCells[i] = temporaryStorage;
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void surroundingTileChanged (Vector3Int coordinates, bool changedToGrass)
