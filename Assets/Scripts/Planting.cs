@@ -47,7 +47,7 @@ public class Planting : MonoBehaviour
         }
     }
 
-    //changes the clicked tile to another tile within a certain radius around the character
+    //Plants a plant at the clicked location
     void SpawnPlants()
     {
         //detect the position of the mouse and convert the coordinates to world coordinates
